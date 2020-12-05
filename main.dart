@@ -1,66 +1,12 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'TEST',
-      theme: ThemeData(
-        primaryColor: Color(0xfff00045),
-        accentColor: Color(0xff25D355),
-      ),
-      home: Scaffold(
-    appBar: AppBar(
-      backgroundColor: Colors.red[400],
-centerTitle:true,
-        ),
-    body:Center(
-    child: Text(
-    IP3([
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    false, true,true,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
-    ], 111999999),
-    ),
-    ),
-    ),
-    );
-  }
-
 String  IP3(List<bool> S, double T) {
     List<bool> X = bitUret(T);
-   List<bool>K= xorlama(X, S);
-return K.toString().replaceAll("false", "0").replaceAll("true", "1");
+    List<bool>K= xorlama(X, S);
+    return K.toString();
   }
 
-
+   
 
   List<bool> bitUret(double T) {
     double xYeni = 0;
@@ -70,7 +16,7 @@ return K.toString().replaceAll("false", "0").replaceAll("true", "1");
       0.418789897897,
       0.428789897897,
       0.448789897897,
-      0.458789897897,
+      0.458789819797,
       0.128789897897,
       0.788789897897,
       0.358789897897,
@@ -79,8 +25,8 @@ return K.toString().replaceAll("false", "0").replaceAll("true", "1");
       0.248789897897,
       0.348789897897
 
-    ]; // ip2 den gelecek değerler
-    double xEski =kaotik[random.nextInt(kaotik.length)];
+    ];//ip2 den gelecek değerler
+    double xEski =kaotik[random.nextInt(kaotik.length)]; 
     List<bool> x = [];
     while (x.length <= T) {
       for (int i = 0; i < 1000000; i++) {
@@ -105,6 +51,39 @@ return K.toString().replaceAll("false", "0").replaceAll("true", "1");
     return K;
 
   }
+
+
+
+void main(){
+
+  print(IP3([
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,false, true,false,
+    ], 11999999));
+  
+ 
+
 }
-
-
+  
